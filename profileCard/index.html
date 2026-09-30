@@ -5,18 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile Card</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cloudflare.com"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
   </head>
   <body>
     <main>
+      <!-- card container  -->
       <div class="profile-card">
         <button class="theme-btn">Dark Theme</button>
+
+        <!-- profile img section  -->
         <div class="profile-img">
           <div>
             <img
@@ -25,7 +21,7 @@
             />
           </div>
         </div>
-
+<!-- profile information section  -->
         <div class="profile-info">
           <h1 class="profile-title">Ashutosh Roy</h1>
           <p class="profile-username">@ashutoshroy</p>
@@ -45,17 +41,20 @@
           <p><span class="followCount">000</span> followers</p>
           <p><span class="likeCount">0</span> Like</p>
         </div>
+        <!-- profile action btns  -->
         <div class="profile-actions">
           <button class="follow-btn">Follow</button>
           <button class="message-btn">Message</button>
           <button class="likeBtn">Like</button>
         </div>
+        <!-- message write container  -->
         <div id="msgContainer" class="messageContainer">
           <input type="text" id="inputMsg" maxlength="100" />
           <button id="sendMsg">Send</button>
           <br />
           <span class="charCount">0<span>/100</span></span>
         </div>
+        <!-- display msg section  -->
         <div class="displayMsg"></div>
       </div>
     </main>

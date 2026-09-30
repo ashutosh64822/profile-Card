@@ -151,6 +151,8 @@ main {
   cursor: pointer;
 }
 
+/* theme part start */
+
 body.dark-theme {
   background-color: #111827;
 
@@ -186,3 +188,4 @@ body.dark-theme .remove {
 
   color: white;
 }
+/* theme part end  */
