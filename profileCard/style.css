@@ -85,7 +85,7 @@ main {
   cursor: pointer;
 }
 
-.profile-actions button,
+.profile-actions button:hover,
 .theme-btn:hover {
   background-color: #333;
 }
@@ -189,3 +189,28 @@ body.dark-theme .remove {
   color: white;
 }
 /* theme part end  */
+
+@media (max-width: 400px) {
+
+  .profile-card {
+    padding: 15px;
+  }
+
+  .profile-stats {
+    font-size: 12px;
+  }
+
+  .profile-actions {
+    gap: 5px;
+  }
+
+  .profile-actions button {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+
+  #msgContainer input {
+    width: 62%;
+  }
+
+}
