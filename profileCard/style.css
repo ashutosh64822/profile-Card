@@ -17,12 +17,9 @@ main {
   background-color: #c0d8c2;
   border: 1px solid #ccc;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
 }
-.profile-img {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-}
+
 .profile-img img {
   width: 100px;
   height: 100px;
@@ -46,6 +43,7 @@ main {
 .skills {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
@@ -62,6 +60,13 @@ main {
 }
 .profile-bio {
   margin-bottom: 10px;
+}
+.profile-actions {
+  gap: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px 0;
 }
 .profile-actions button {
   border: none;
@@ -83,17 +88,15 @@ main {
   margin: 10px 0;
 }
 
-#msgContainer input{
+#msgContainer input {
   padding: 4px 15px;
   outline: none;
   border: none;
   border-radius: 8px;
   margin-right: 10px;
-  
 }
 
-
-#msgContainer button{
+#msgContainer button {
   border: none;
   outline: none;
   background: transparent;
@@ -105,7 +108,28 @@ main {
   cursor: pointer;
 }
 
-.messageContainer{
-  display: none ;
+.messageContainer {
+  display: none;
 }
 
+.remove {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  background-color: #efebeb;
+  padding: 10px;
+  border-radius: 10px;
+}
+.del{
+  border: none;
+  outline: none;
+  background: transparent;
+  background-color: black;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
