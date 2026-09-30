@@ -1,10 +1,17 @@
 const followBtn = document.querySelector(".follow-btn");
 const msgBtn = document.querySelector(".message-btn");
+const followCount = document.querySelectorAll(".followCount");
+let count = 0;
 followBtn.addEventListener("click", function () {
   if (followBtn.innerText === "Follow") {
     followBtn.innerText = "Following";
+    count += 1;
   } else {
     followBtn.innerText = "Follow";
+    count -= 1;
+  }
+  for (let counts of followCount) {
+    counts.innerText = count;
   }
 });
 
@@ -32,6 +39,10 @@ document.querySelector("#sendMsg").addEventListener("click", function () {
   `;
   if (msg.length === 0) {
     alert("please enter message!");
+    return;
+  }
+  if (msg.length === 10) {
+    alert("writing limit over");
     return;
   }
   displayMsg.appendChild(div);
