@@ -1,4 +1,4 @@
-from pathlib import Path
+
 
 content = """# 🌟 Interactive Profile Card
 
