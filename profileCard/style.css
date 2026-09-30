@@ -20,6 +20,10 @@ main {
   text-align: center;
 }
 
+.theme-btn {
+  margin-bottom: 10px;
+}
+
 .profile-img img {
   width: 100px;
   height: 100px;
@@ -68,7 +72,8 @@ main {
   align-items: center;
   margin: 10px 0;
 }
-.profile-actions button {
+.profile-actions button,
+.theme-btn {
   border: none;
   outline: none;
   background: transparent;
@@ -80,7 +85,8 @@ main {
   cursor: pointer;
 }
 
-.profile-actions button:hover {
+.profile-actions button,
+.theme-btn:hover {
   background-color: #333;
 }
 
@@ -122,7 +128,7 @@ main {
   padding: 10px;
   border-radius: 10px;
 }
-.del{
+.del {
   border: none;
   outline: none;
   background: transparent;
@@ -133,7 +139,7 @@ main {
   font-weight: 600;
   cursor: pointer;
 }
-.likeBtn{
+.likeBtn {
   border: none;
   outline: none;
   background: transparent;
@@ -143,4 +149,40 @@ main {
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
+}
+
+body.dark-theme {
+  background-color: #111827;
+
+  color: #ffffff;
+}
+
+body.dark-theme .profile-card {
+  background-color: #1f2937;
+
+  border-color: #374151;
+
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme .profile-username {
+  color: #d1d5db;
+}
+
+body.dark-theme #msgContainer input {
+  background-color: #111827;
+
+  color: white;
+
+  border-color: #4b5563;
+}
+
+body.dark-theme #msgContainer input::placeholder {
+  color: #9ca3af;
+}
+
+body.dark-theme .remove {
+  background-color: #374151;
+
+  color: white;
 }
