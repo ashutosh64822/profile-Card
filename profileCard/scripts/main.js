@@ -11,7 +11,7 @@ followBtn.addEventListener("click", function () {
     count -= 1;
   }
   for (let counts of followCount) {
-    counts.innerText = count;
+    counts.innerText = String(count).padStart(3, "0");
   }
 });
 
@@ -29,6 +29,7 @@ msgBtn.addEventListener("click", function () {
 
 const inputMsg = document.querySelector("#inputMsg");
 const displayMsg = document.querySelector(".displayMsg");
+const charCount = document.querySelector(".charCount");
 document.querySelector("#sendMsg").addEventListener("click", function () {
   const msg = inputMsg.value.trim();
   const div = document.createElement("div");
@@ -41,7 +42,7 @@ document.querySelector("#sendMsg").addEventListener("click", function () {
     alert("please enter message!");
     return;
   }
-  if (msg.length === 10) {
+  if (msg.length > 100) {
     alert("writing limit over");
     return;
   }
@@ -51,4 +52,25 @@ document.querySelector("#sendMsg").addEventListener("click", function () {
     div.remove();
   });
   inputMsg.value = "";
+
+  charCount.innerText = `0/100`;
+});
+
+inputMsg.addEventListener("input", function () {
+  const currentCharCount = inputMsg.value.length;
+  charCount.innerText = `${currentCharCount}/100`;
+});
+
+const likeBtn = document.querySelector(".likeBtn");
+const likeCount = document.querySelector(".likeCount");
+let lCount = 0;
+likeBtn.addEventListener("click", function () {
+  if (likeBtn.innerText === "Like") {
+    likeBtn.innerText = "Liked";
+    lCount += 1;
+  } else {
+    likeBtn.innerText = "Like";
+    lCount -= 1;
+  }
+  likeCount.innerText = lCount;
 });
